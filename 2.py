@@ -1,0 +1,16 @@
+'''
+Problem 3
+===========
+Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+'''
+Subject = ('I', 'You') # varibale named "subject" contain two string 
+Verb = ('Play', 'Love') # varibale named "verb" contain two string 
+Objectt = ('Hockey', 'Football') # varibale named "object" contain two string
+with open ("Sentence_Genator.txt", 'w') as phrase: # to create new file 
+	for sub in Subject: 
+		for v in Verb:
+			for o in Objectt: # these three loop that i run is because this will take each word form sub,v,o ex. first loop run = i  ,play , hokey
+#secod loop = i , play ,footbal 
+#third loop = i , love , hockey 
+				phrase.write(sub + ' ' + v + ' ' + o + ' .\n') # to wirte in file 'Sentence_Genator.txt' , to join words from each variable , "./n" = when loops run and join each  variable the end spce"." and goses to next line by "\n" other wise it will print or write all possible sentences in a line. Ex. i play hockey .i play football . 
+
